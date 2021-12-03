@@ -7,12 +7,9 @@ import connectWeb3 from '../ethereum/web3';
 
 export default function Home() {
     const [isConnected, setIsConnected] = useState(false);
-    const [instance, setInstance] = useState(null);
     const [address, setAddress] = useState(null);
 
     const connectToMetaMask = async () => {
-        const contractInstance = connect();
-        setInstance(contractInstance);
         setIsConnected(true);
         const accounts = await connectWeb3().eth.getAccounts();
         setAddress(accounts[0]);
