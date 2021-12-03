@@ -20,7 +20,7 @@ export default function Home() {
 
     return (
         <div>
-            { isConnected ? <button>{address}</button> : <button onClick={connectToMetaMask}>Connect to MetaMask</button>}
+            {isConnected ? <button>{address}</button> : <button onClick={connectToMetaMask}>Connect to MetaMask</button>}
             {isConnected ? <h1>connected</h1> : <h1>not connected</h1>}
         </div>
     );
