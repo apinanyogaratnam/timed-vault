@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import connect from '../ethereum/timeVault';
+import connect from '../ethereum/timeVault.js';
 import { useState } from 'react';
-import connectWeb3 from '../ethereum/web3';
+import connectWeb3 from '../ethereum/web3.js';
 import Web3 from 'web3';
 
 export default function Home() {
