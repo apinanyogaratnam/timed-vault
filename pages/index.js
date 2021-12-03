@@ -10,9 +10,9 @@ export default function Home() {
     const [address, setAddress] = useState(null);
 
     const connectToMetaMask = async () => {
-        setIsConnected(true);
         const accounts = await connectWeb3().eth.getAccounts();
         setAddress(accounts[0]);
+        setIsConnected(true);
     };
 
     return (
