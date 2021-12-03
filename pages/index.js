@@ -78,6 +78,7 @@ export default function Home() {
             <form>
                 <button onClick={unlockFunds}>Unlock</button>
             </form>
+            <p>please use the rinkeby testnet to use this application</p>
         </div>
     );
 }
