@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: timed-vault.vercel.app
+Token: b51ab8268db93bc2f42f1d856cc1512c1c312eb5ef67ce460680a79cbe25e2b3
