@@ -1,10 +1,12 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
+require('dotenv').config()
+console.log(process.env.MNEMONIC);
 
 const { abi, evm } = require('./build/TimedVault.json');
 
 const provider = new HDWalletProvider(
-  '',
+  process.env.MNEMONIC,
   'https://rinkeby.infura.io/v3/d55c4f57b80445d284aa7754f355aaeb'
 );
 
