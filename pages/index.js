@@ -18,6 +18,7 @@ export default function Home() {
         const accounts = await connectToMetaMask().eth.getAccounts();
         setAddress(accounts[0]);
         setIsConnected(true);
+        getBalance();
     };
 
     const lockFunds = async (event) => {
@@ -48,8 +49,6 @@ export default function Home() {
         const balanceResponse = await timeVault.methods.checkBalance().call({ from: accounts[0] });
         setBalance(connectToMetaMask().utils.fromWei(balanceResponse, 'ether'));
     };
-
-    getBalance();
 
     return (
         <div>
