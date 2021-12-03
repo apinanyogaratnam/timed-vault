@@ -6,4 +6,4 @@ const connect = () => {
     return new web3.eth.Contract(TimedVault.abi, '0xAD69E3De929f34B3dE1BB89C00663331D376f61E');
 };
 
-export default connect;
+module.exports = connect;
