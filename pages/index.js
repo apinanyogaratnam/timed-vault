@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import connect from '../ethereum/timeVault';
 import { useState } from 'react';
 import connectWeb3 from '../ethereum/web3';
+import Web3 from 'web3';
 
 export default function Home() {
     const [isConnected, setIsConnected] = useState(false);
@@ -44,8 +45,8 @@ export default function Home() {
     const getBalance = async () => {
         const timeVault = await connect();
         const accounts = await connectWeb3().eth.getAccounts();
-        const balance = await timeVault.methods.checkBalance().call({ from: accounts[0] });
-        setBalance(connectWeb3().utils.fromWei(balance, 'ether'));
+        const balanceResponse = await timeVault.methods.checkBalance().call({ from: accounts[0] });
+        setBalance(connectWeb3().utils.fromWei(balanceResponse, 'ether'));
     };
 
     getBalance();
