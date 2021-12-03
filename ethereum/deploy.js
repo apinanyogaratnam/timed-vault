@@ -1,7 +1,6 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 require('dotenv').config()
-console.log(process.env.MNEMONIC);
 
 const { abi, evm } = require('./build/TimedVault.json');
 
