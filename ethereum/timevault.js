@@ -1,5 +1,5 @@
 import connectToMetaMask from './web3';
-import TimedVault from '../ethereum/build/TimedVault.json';
+import TimedVault from './build/TimedVault.json';
 
 const connect = () => {
     const web3 = connectToMetaMask();
